@@ -88,7 +88,26 @@ find_csa([1, 2, 3, 4, 5], [4,5]);
 
 
 
-find_csa(list1,list2);
 
+
+
+
+function findArr(arr, subarr) {
+    if (subarr.length === 0) {
+        return 0;
+    }
+    var haystack = arr.slice(0).join(","),
+        needle = subarr.join(","),
+        pos = haystack.indexOf(needle);
+        console.log('haystack is ',haystack);
+        console.log('needle is ',needle);
+        console.log('pos is ',pos);
+    if (pos > 0) {
+        pos = haystack.substring(1, pos).split(",").length;
+    }
+    console.log('pos is ',pos);
+    return pos;
+}
+findArr(list1,list2);
 
 }());
