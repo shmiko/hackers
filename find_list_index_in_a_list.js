@@ -42,7 +42,7 @@ function find(list,sublist){
 		var tempArrStr = "";
 		tempArrStr = sublist.toString();
 		if(list.indexOf(tempArrStr)){
-			console.log("true -tostring works", list.indexOf(tempString));
+			console.log("true -tostring works", list.indexOf(tempString),' tempArrStr is ', tempArrStr);
 			return list.indexOf(tempString);
 		}
 		// if(numCheck == sublist.length){
@@ -60,5 +60,25 @@ function find(list,sublist){
 find(list1,list2);
 
 // find(list3,list4);
+
+
+var find_csa = function (arr, subarr, from_index) {
+    from_index = from_index || 0;
+
+    var i, found, j;
+    var last_check_index = arr.length - subarr.length;
+    var subarr_length = subarr.length;
+
+    position_loop:
+    for (i = from_index; i <= last_check_index; ++i) {
+        for (j = 0; j < subarr_length; ++j) {
+            if (arr[i + j] !== subarr[j]) {
+                continue position_loop;
+            }
+        }
+        return i;
+    }
+    return -1;
+};
 
 }());
