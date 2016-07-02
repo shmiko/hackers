@@ -25,18 +25,23 @@ function find(list,sublist){
 			if(list.indexOf(tempString)) {//&& (j > firstIndex || firstIndex == null){
 				console.log("checking inside array loop -- position is ",list.indexOf(tempString), 'numCheck is', numCheck, ' and firstIndex is ', firstIndex);				
 				if(firstIndex === null){
+					console.log("firstIndex is null", firstIndex);
 					firstIndex = list.indexOf(tempString);
 					numCheck =+ 1;
-				} else if(firstIndex != 0 && firstIndex > j){
+					console.log("firstIndex is now ", firstIndex, 'and numCheck is now set as ', numCheck);
+				} else if(firstIndex != null && list.indexOf(tempString) > firstIndex){
+					console.log("firstIndex is not null ", firstIndex, 'and list.indexOf(tempString) > firstIndex ', list.indexOf(tempString) > firstIndex);
 					numCheck =+ 1;
 				}
 				console.log("true and numcheck is ", numCheck);
 			} else {
+				numCheck =- 1;
 				console.log("false");
 			}
 		}
-		if(numCheck === sublist.length){
-			return "end true";
+		if(numCheck == sublist.length){
+			console.log("true");
+			return firstIndex;
 		} else {
 			//should return -1
 			return list.indexOf(tempString);
