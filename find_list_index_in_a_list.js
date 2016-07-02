@@ -25,7 +25,7 @@ function find(list,sublist){
 			if(list.indexOf(tempString)) {//&& (j > firstIndex || firstIndex == null){
 				console.log("checking inside array loop -- position is ",list.indexOf(tempString), 'numCheck is', numCheck, ' and firstIndex is ', firstIndex);				
 				if(firstIndex === null){
-					console.log("firstIndex is null", firstIndex);
+					console.log("firstIndex is null");
 					firstIndex = list.indexOf(tempString);
 					numCheck =+ 1;
 					console.log("firstIndex is now ", firstIndex, 'and numCheck is now set as ', numCheck);
@@ -39,10 +39,17 @@ function find(list,sublist){
 				console.log("false - element of sublist doesn't exist in first list");
 			}
 		}
-		if(numCheck == sublist.length){
-			console.log("true");
-			return firstIndex;
-		} else {
+		var tempArrStr = "";
+		sublist.toString();
+		if(list.indexOf(tempArrStr)){
+			console.log("true -tostring works", list.indexOf(tempString));
+			return list.indexOf(tempString);
+		}
+		// if(numCheck == sublist.length){
+		// 	console.log("true");
+		// 	return firstIndex;
+		// } 
+		else {
 			//should return -1
 			return list.indexOf(tempString);
 		}
