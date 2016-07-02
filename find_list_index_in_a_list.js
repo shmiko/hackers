@@ -61,24 +61,34 @@ find(list1,list2);
 
 // find(list3,list4);
 
-
-var find_csa = function (arr, subarr, from_index) {
-    from_index = from_index || 0;
-
-    var i, found, j;
-    var last_check_index = arr.length - subarr.length;
-    var subarr_length = subarr.length;
-
-    position_loop:
-    for (i = from_index; i <= last_check_index; ++i) {
-        for (j = 0; j < subarr_length; ++j) {
-            if (arr[i + j] !== subarr[j]) {
-                continue position_loop;
-            }
-        }
-        return i;
+function find_csa(arr, subarr, from_index) {
+    from_index |= 0;
+    if (subarr.length === 0) {
+        return from_index;
     }
-    return -1;
-};
+    var haystack = "," + arr.slice(from_index).join(",") + ",",
+        needle = "," + subarr.join(",") + ",",
+        pos = haystack.indexOf(needle);
+    if (pos > 0) {
+        pos = haystack.substring(1, pos).split(",").length + from_index;
+    }
+    console.log(pos);
+    return pos;
+}
+console.log("All tests should return true");
+console.log(find_csa([1, 2, 3, 4, 5], [1, 2, 3]) === 0);
+console.log(find_csa([1, 2, 3, 4, 5], [2, 3, 4]) === 1);
+console.log(find_csa([1, 2, 3, 4, 5], [5]) === 4);
+console.log(find_csa([1, 2, 3, 4, 5], [6]) === -1);
+console.log(find_csa([1, 2, 3, 4, 5], [1, 3]) === -1);
+console.log(find_csa([6, 6, 6, 7], [6, 6, 7]) === 1);
+console.log(find_csa([1, 2, 3, 4, 5], []) === 0);
+console.log(find_csa([3, 4, 3, 4, 3, 4], [3, 4, 3], 1) === 2);
+console.log(find_csa([1, 2, 3, 4, 5], [], 1) === 1);
+
+
+
+find_csa(list1,list2);
+
 
 }());
