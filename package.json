@@ -1,0 +1,22 @@
+{
+  "name": "hackers",
+  "version": "1.0.0",
+  "description": "code hacker code",
+  "main": "find_list_in_a_list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmiko/hackers.git"
+  },
+  "author": "Paul Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shmiko/hackers/issues"
+  },
+  "homepage": "https://github.com/shmiko/hackers#readme",
+  "dependencies": {
+    "file-system": "^2.2.1"
+  }
+}

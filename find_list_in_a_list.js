@@ -34,7 +34,7 @@ function find(list,sublist){
 	console.log(list.length,sublist.length);
 };
 
-var fs = require('fs');
+var fs = require('file-system');
 var wstream = fs.createWriteStream(process.env.OUTPUT_PATH);
 
 process.stdin.on('end', function(){
