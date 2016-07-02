@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/shmiko/hackers#readme",
   "dependencies": {
-    "file-system": "^2.2.1"
+    "bignumber": "^1.1.0",
+    "file-system": "^2.2.1",
+    "jquery": "^3.0.0",
+    "lodash": "^4.13.1",
+    "underscore": "^1.8.3"
   }
 }
