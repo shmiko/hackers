@@ -33,10 +33,10 @@ function find(list,sublist){
 					console.log("firstIndex is not null ", firstIndex, 'and list.indexOf(tempString) > firstIndex ', list.indexOf(tempString) > firstIndex);
 					numCheck =+ 1;
 				}
-				console.log("true and numcheck is ", numCheck);
+				
 			} else {
 				numCheck =- 1;
-				console.log("false");
+				console.log("false - element of sublist doesn't exist in first list");
 			}
 		}
 		if(numCheck == sublist.length){
