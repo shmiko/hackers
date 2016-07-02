@@ -24,7 +24,7 @@ function find(list,sublist){
 			//if the first element of the sublist exists and we have not yet set the cheksum
 			if(list.indexOf(tempString)) {//&& (j > firstIndex || firstIndex == null){
 				console.log("checking inside array loop -- position is ",list.indexOf(tempString), 'numCheck is', numCheck, ' and firstIndex is ', firstIndex);				
-				if(firstIndex === 0){
+				if(firstIndex === null){
 					firstIndex = list.indexOf(tempString);
 					numCheck =+ 1;
 				} else if(firstIndex != 0 && firstIndex > j){
