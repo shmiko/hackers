@@ -40,7 +40,7 @@ function find(list,sublist){
 			}
 		}
 		var tempArrStr = "";
-		sublist.toString();
+		tempArrStr = sublist.toString();
 		if(list.indexOf(tempArrStr)){
 			console.log("true -tostring works", list.indexOf(tempString));
 			return list.indexOf(tempString);
