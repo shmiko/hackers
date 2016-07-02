@@ -84,7 +84,7 @@ function find_csa(arr, subarr, from_index) {
 // console.log(find_csa([6, 6, 6, 7], [6, 6, 7]) === 1);
 // console.log(find_csa([1, 2, 3, 4, 5], []) === 0);
 // console.log(find_csa([3, 4, 3, 4, 3, 4], [3, 4, 3], 1) === 2);
-find_csa([1, 2, 3, 4, 5], [4,5]);
+console.log('test list 3 and 4',find_csa(list3,list4) === 1);
 
 
 
@@ -96,8 +96,8 @@ function findArr(arr, subarr) {
     if (subarr.length === 0) {
         return 0;
     }
-    var haystack = arr.slice(0).join(","),
-        needle = subarr.join(","),
+    var haystack = arr.toString(),
+        needle = subarr.toString(),
         pos = haystack.indexOf(needle);
         console.log('haystack is ',haystack);
         console.log('needle is ',needle);
@@ -105,9 +105,9 @@ function findArr(arr, subarr) {
     if (pos > 0) {
         pos = haystack.substring(1, pos).split(",").length;
     }
-    console.log('pos is ',pos);
+    //console.log('pos is ',pos);
     return pos;
 }
-findArr(list1,list2);
-
+// findArr(list1,list2);
+findArr(list3,list4);
 }());
