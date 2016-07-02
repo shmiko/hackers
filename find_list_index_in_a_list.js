@@ -10,6 +10,8 @@ var list2 = [3, 2];
 var list3 = [1, 2, 3];
 var list4 = [2, 3];
 
+var list5 = [1, 2, 3, 4, 5], list6 = [5,4];
+
 var tempString = null;
 var numCheck = 0;
 var firstIndex = null;
@@ -80,13 +82,13 @@ function find_csa(arr, subarr, from_index) {
 // console.log(find_csa([1, 2, 3, 4, 5], [2, 3, 4]) === 1);
 // console.log(find_csa([1, 2, 3, 4, 5], [5]) === 4);
 // console.log(find_csa([1, 2, 3, 4, 5], [6]) === -1);
-// console.log(find_csa([1, 2, 3, 4, 5], [1, 3]) === -1);
+console.log(find_csa([1, 2, 3, 4, 5], [1, 3]) === -1);
 // console.log(find_csa([6, 6, 6, 7], [6, 6, 7]) === 1);
 // console.log(find_csa([1, 2, 3, 4, 5], []) === 0);
 // console.log(find_csa([3, 4, 3, 4, 3, 4], [3, 4, 3], 1) === 2);
 console.log('test list 3 and 4',find_csa(list3,list4) === 1);
 
-
+find_csa(list5,list6);
 
 
 
