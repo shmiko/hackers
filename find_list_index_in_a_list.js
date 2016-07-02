@@ -30,7 +30,7 @@ function find(list,sublist){
 				} else if(firstIndex != 0 && firstIndex > j){
 					numCheck =+ 1;
 				}
-				console.log("true");
+				console.log("true and numcheck is ", numCheck);
 			} else {
 				console.log("false");
 			}
@@ -47,6 +47,6 @@ function find(list,sublist){
 
 find(list1,list2);
 
-find(list3,list4);
+// find(list3,list4);
 
 }());
