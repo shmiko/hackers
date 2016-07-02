@@ -84,7 +84,7 @@ console.log(find_csa([1, 2, 3, 4, 5], [1, 3]) === -1);
 console.log(find_csa([6, 6, 6, 7], [6, 6, 7]) === 1);
 console.log(find_csa([1, 2, 3, 4, 5], []) === 0);
 console.log(find_csa([3, 4, 3, 4, 3, 4], [3, 4, 3], 1) === 2);
-console.log(find_csa([1, 2, 3, 4, 5], [], 1) === 1);
+find_csa([1, 2, 3, 4, 5], [4,5]);
 
 
 
