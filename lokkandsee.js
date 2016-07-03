@@ -104,12 +104,12 @@ function lookSay(digits) {
     return result;
 }
  
-(function output(seed, iterations) {
-    for (var i = 0; i < iterations; i++) {
-        console.log(seed);
-        seed = lookSay(seed);
-    }
-})("1", 10);
+// (function output(seed, iterations) {
+//     for (var i = 0; i < iterations; i++) {
+//         console.log('seed is ',seed);
+//         seed = lookSay(seed);
+//     }
+// })("1", 10);
 
 
 
