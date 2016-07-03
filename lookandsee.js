@@ -16,10 +16,12 @@ function lookSay(digits) {
             times = 1;
         }
     });
- 
+    console.log('result is ', result)
     return result;
 }
  
 
 
 lookSay("33332211");
+
+
