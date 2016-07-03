@@ -26,3 +26,34 @@ for (var n=0; n<11; n++){
 }
 
 lookAndSay([11223]);
+
+
+var hh=0;
+function ls(j,j1)
+{
+     var l1=j.length;
+     var fer=j.split('');
+     var str='';
+     var counter=1;
+     for(var t=0;t<fer.length;t++)
+     { 
+         if(fer[t]==fer[t+1])
+            {
+                   counter++;            
+            }
+            else
+            {
+                   str=str+""+""+fer[t]+counter;
+                     counter=1;
+            }    
+    }
+    console.log(str);
+    while(hh<5)   //REPLACE THE NUMBER HERE TO CHANGE NUMBER OF COUNTS!
+    {
+         hh++;
+         //console.log(hh);
+         ls(str);
+    }
+}
+
+ls("1");
