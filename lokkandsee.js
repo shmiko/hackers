@@ -57,3 +57,28 @@ function ls(j,j1)
 }
 
 ls([113322]);
+
+
+/* 
+    Look and say sequence
+    11
+    21
+    1211
+    111221
+    312211
+    13112221
+    1113213211
+    31131211131221
+    13211311123113112211
+    11131221133112132113212221
+
+*/
+
+function LookAndSay(str){
+    return str.replace(/(.)\1*/g, function(seq, p1){return seq.length.toString() + p1});
+}
+
+var num = "1";
+for (var i = 10; i > 0; i--) {
+    num = LookAndSay(num);
+}
