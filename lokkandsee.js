@@ -47,7 +47,7 @@ function ls(j,j1)
                      counter=1;
             }    
     }
-    console.log(str);
+    console.log("str is ",str);
     while(hh<5)   //REPLACE THE NUMBER HERE TO CHANGE NUMBER OF COUNTS!
     {
          hh++;
@@ -56,4 +56,4 @@ function ls(j,j1)
     }
 }
 
-ls("1");
+ls("113322");
