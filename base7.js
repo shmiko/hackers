@@ -23,24 +23,24 @@
         var num = input, l = num, sNum = 0, newArray = [];
         //for (var l = 0; l < num.length; l++){
             console.log('num is ', num);
-            while (l > 0){
+            while (l >= 1){
                 console.log('l is ', l);
                 sNum = l%7;
-                console.log('l%7 is ', l%7);
-                console.log('sNum is ', sNum);
+                // console.log('l%7 is ', l%7);
+                // console.log('sNum is ', sNum);
                 if (b7[sNum] != 'undefined' || b7[sNum] != undefined){
                     newArray.push(b7[sNum]);
                 }
                 l = l/7;
-                console.log('2nd l is ', l);
+                // console.log('2nd l is ', l);
             }
         //}
        // if (newArray != 'undefined' || newArray != undefined){
-            console.log('newarray is ',newArray.reverse());
+            // console.log('newarray is ',newArray.reverse());
         //};
         return newArray.reverse();
     };
 
 
     // convert(7792875);
-    convert(7);
+    console.log(convert(7));
