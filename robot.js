@@ -20,18 +20,22 @@ function compute(instructions) {
 	console.log('agrid is ',aGrid);
 	var instr = instructions.toUpperCase();
 	console.log('instr is ',instr);
-
-	for (var i = 0; i < instr.length; i++){
+	//create grid
+	for (var g = 0; g < 11; g++){
+		rows[i] = "0";
+		aGrid.push(rows);
+	}
+	for (var i = 0; i < 11; i++){
 		movesArray.push(instr[i]);
 		if(instr[i] === 'P'){
-			rows[0] = "0";
+			aGrid[0][0] = "0";
 		} else if (instr[i] === 'M'){
-			rows[i] = "0";
+			aGrid[i][0] = "0";
 		} else if (instr[i] === 'L'){
-			cols[c] = "0";
+			aGrid[i][c] = "0";
 		}
-		aGrid.push(rows);
 		c+=1;
+		console.log('current grid is ', aGrid);
 	}
 	return aGrid;
 	//.toString(16) for hex convert
