@@ -21,7 +21,7 @@
     function convert(input) {
         var b7 = ['0','a', 't', 'l', 's', 'i', 'n'];
         var num = input, i = num, sNum = 0, newArray = [];
-        for (var l = 0; l < input.length){
+        for (var l = 0; l < input.length; l++){
             console.log('input is ', input);
             //while (l > 0){
                 sNum = l%7;
