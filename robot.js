@@ -21,10 +21,11 @@ function compute(instructions) {
 	var instr = instructions.toUpperCase();
 	console.log('instr is ',instr);
 	//create grid
-	for (var g = 0; g < 11; g++){
+	for (var g = 0; g < 9; g++){
 		rows[i] = "0";
 		aGrid.push(rows);
-	}
+	};
+	console.log('current grid is ', aGrid);
 	for (var i = 0; i < 11; i++){
 		movesArray.push(instr[i]);
 		if(instr[i] === 'P'){
@@ -35,8 +36,9 @@ function compute(instructions) {
 			aGrid[i][c] = "0";
 		}
 		c+=1;
-		console.log('current grid is ', aGrid);
+		
 	}
+	//console.log('current grid is ', aGrid);
 	return aGrid;
 	//.toString(16) for hex convert
 
