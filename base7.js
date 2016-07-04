@@ -20,18 +20,25 @@
 
     function convert(input) {
         var b7 = ['0','a', 't', 'l', 's', 'i', 'n'];
-        var num = input, i = num, sNum = 0, newArray = [];
-        for (var l = 0; l < num.length; l++){
+        var num = input, l = num, sNum = 0, newArray = [];
+        //for (var l = 0; l < num.length; l++){
             console.log('num is ', num);
-            //while (l > 0){
-                sNum = num[l]%7;
+            while (l > 0){
+                console.log('l is ', l);
+                sNum = l%7;
+                console.log('l%7 is ', l%7);
+                console.log('sNum is ', sNum);
                 newArray.push(b7[sNum]);
                 l = l/7;
-            //}
-        }
-        console.log(newArray.reverse());
+                console.log('2nd l is ', l);
+            }
+        //}
+        if (newArray != 'undefined' || newArray != undefined){
+            console.log(newArray.reverse());
+        };
         return newArray.reverse();
     };
 
 
-    convert(7792875);
+    // convert(7792875);
+    convert(7);
