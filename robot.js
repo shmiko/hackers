@@ -17,8 +17,10 @@ function compute(instructions) {
 		cannot move further than x=1"0"
 		cannot go higher than y-15
 	*/
-	console.log('agrid is ',agrid);
+	console.log('agrid is ',aGrid);
 	var instr = instructions.toUpperCase();
+	console.log('instr is ',instr);
+
 	for (var i = 0; i < instr.length; i++){
 		movesArray.push(instr[i]);
 		if(instr[i] === 'P'){
@@ -26,12 +28,13 @@ function compute(instructions) {
 		} else if (instr[i] === 'M'){
 			rows[i] = "0";
 		} else if (instr[i] === 'L'){
-			col[c] = "0";
+			cols[c] = "0";
 		}
 		aGrid.push(rows);
-		c=+1;
+		c+=1;
 	}
 	return aGrid;
+	//.toString(16) for hex convert
 
 }
 
