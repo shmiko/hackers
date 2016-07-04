@@ -18,9 +18,9 @@
 //     }
 
 
-    function convert(in) {
+    function convert(input) {
         var b7 = ['0','a', 't', 'l', 's', 'i', 'n'];
-        var num = in, i  = num, sNum = 0, newArray = [];
+        var num = input, i  = num, sNum = 0, newArray = [];
         while (i > 0){
             sNum = i%7;
             newArray.push(sNum);
@@ -31,4 +31,4 @@
     };
 
 
-    convert(7;)
+    convert(7);
