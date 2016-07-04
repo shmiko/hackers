@@ -28,14 +28,16 @@
                 sNum = l%7;
                 console.log('l%7 is ', l%7);
                 console.log('sNum is ', sNum);
-                newArray.push(b7[sNum]);
+                if (b7[sNum] != 'undefined' || b7[sNum] != undefined){
+                    newArray.push(b7[sNum]);
+                }
                 l = l/7;
                 console.log('2nd l is ', l);
             }
         //}
-        if (newArray != 'undefined' || newArray != undefined){
-            console.log(newArray.reverse());
-        };
+       // if (newArray != 'undefined' || newArray != undefined){
+            console.log('newarray is ',newArray.reverse());
+        //};
         return newArray.reverse();
     };
 
