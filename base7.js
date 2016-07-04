@@ -21,10 +21,10 @@
     function convert(input) {
         var b7 = ['0','a', 't', 'l', 's', 'i', 'n'];
         var num = input, i = num, sNum = 0, newArray = [];
-        for (var l = 0; l < input.length; l++){
-            console.log('input is ', input);
+        for (var l = 0; l < num.length; l++){
+            console.log('num is ', num);
             //while (l > 0){
-                sNum = l%7;
+                sNum = num[l]%7;
                 newArray.push(b7[sNum]);
                 l = l/7;
             //}
