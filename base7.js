@@ -42,5 +42,5 @@
     };
 
 
-    // convert(7792875);
+    console.log(convert(7792875));
     console.log(convert(7));
