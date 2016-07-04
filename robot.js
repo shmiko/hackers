@@ -17,12 +17,12 @@ function compute(instructions) {
 		cannot move further than x=1"0"
 		cannot go higher than y-15
 	*/
-	console.log('agrid is ',aGrid);
+	console.log('starting agrid is ',aGrid);
 	var instr = instructions.toUpperCase();
 	console.log('instr is ',instr);
 	//create grid
-	for (var g = 0; g < 9; g++){
-		rows[i] = "0";
+	for (var g = 0; g < 10; g++){
+		rows[g] = "0";
 		aGrid.push(rows);
 	};
 	console.log('current grid is ', aGrid);
@@ -31,12 +31,12 @@ function compute(instructions) {
 		if(instr[i] === 'P'){
 			aGrid[0][0] = "0";
 		} else if (instr[i] === 'M'){
-			aGrid[i][0] = "0";
+			aGrid[c][0] = "0";
 		} else if (instr[i] === 'L'){
-			aGrid[i][c] = "0";
+			aGrid[c][i] = "0";
 		}
 		c+=1;
-		
+		console.log('c is ',c)
 	}
 	//console.log('current grid is ', aGrid);
 	return aGrid;
