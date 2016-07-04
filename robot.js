@@ -7,7 +7,9 @@ var p,m,l;
 var cols = ["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"], 
 	rows = ["0","0","0","0","0","0","0","0","0","0"];
 var grid = [rows,cols];
+var aGrid = [];
 var movesArray = [];
+var c = 0;
 function compute(instructions) {
 	/*
 		if command is p then pickup and move to position "0"
@@ -15,8 +17,8 @@ function compute(instructions) {
 		cannot move further than x=1"0"
 		cannot go higher than y-15
 	*/
-	console.log('grid is ',grid);
-	var instr = instructions.upperCase();
+	console.log('agrid is ',agrid);
+	var instr = instructions.toUpperCase();
 	for (var i = 0; i < instr.length; i++){
 		movesArray.push(instr[i]);
 		if(instr[i] === 'P'){
@@ -24,10 +26,12 @@ function compute(instructions) {
 		} else if (instr[i] === 'M'){
 			rows[i] = "0";
 		} else if (instr[i] === 'L'){
-			rows[0] = "0";
+			col[c] = "0";
 		}
+		aGrid.push(rows);
+		c=+1;
 	}
-	return grid;
+	return aGrid;
 
 }
 
