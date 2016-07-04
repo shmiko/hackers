@@ -23,7 +23,7 @@
         var num = input, i  = num, sNum = 0, newArray = [];
         while (i > 0){
             sNum = i%7;
-            newArray.push(sNum);
+            newArray.push(b7[sNum]);
             i = i/7;
         }
         console.log(newArray.reverse());
