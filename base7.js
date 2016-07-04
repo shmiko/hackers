@@ -20,11 +20,13 @@
 
     function convert(input) {
         var b7 = ['0','a', 't', 'l', 's', 'i', 'n'];
-        var num = input, i  = num, sNum = 0, newArray = [];
-        while (i > 0){
-            sNum = i%7;
-            newArray.push(b7[sNum]);
-            i = i/7;
+        var num = input, i = num, sNum = 0, newArray = [];
+        for (var l = 0; l < input.length; l++){
+            while (l > 0){
+                sNum = l%7;
+                newArray.push(b7[sNum]);
+                l = l/7;
+            }
         }
         console.log(newArray.reverse());
         return newArray.reverse();
