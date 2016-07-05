@@ -38,7 +38,7 @@ function compute(instructions) {
 		c+=1;
 		console.log('c is ',c)
 	}
-	//console.log('current grid is ', aGrid);
+	console.log('current grid is ', aGrid);
 	return aGrid;
 	//.toString(16) for hex convert
 
