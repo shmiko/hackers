@@ -40,7 +40,7 @@ function compute(instructions) {
 	}
 	console.log('current grid is ', aGrid);
 	return aGrid;
-	//.toString(16) for hex convert
+	.toString(16) for hex convert
 
 }
 
