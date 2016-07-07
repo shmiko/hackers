@@ -36,7 +36,7 @@
             }
         //}
        // if (newArray != 'undefined' || newArray != undefined){
-            // console.log('newarray is ',newArray.reverse());
+            console.log('newarray is ',newArray.reverse());
         //};
         return newArray.reverse();
     };
